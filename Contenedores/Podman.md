@@ -1,7 +1,8 @@
-==Auto-Inicio de un contenedor==
+## Auto-Inicio de un contenedor
 
-==Pre-requisitos:==
+### Pre-requisitos:
 
+```
  '''[abonino@server1 ~]$''' loginctl enable-linger abonino
  '''[abonino@server1 ~]$''' loginctl show-user abonino | grep -i linger
  Linger=yes
@@ -15,9 +16,10 @@
  '''[abonino@server1 ~]$''' podman ps
  CONTAINER ID  IMAGE                        COMMAND               CREATED         STATUS             PORTS                 NAMES
  5ac1e0ca5965  docker.io/library/mediawiki  apache2-foregroun...  29 minutes ago  Up 29 minutes ago  0.0.0.0:4567->80/tcp  My_wiki
-  
+```  
 
-==Configuración del servicio==
+### Configuración del servicio
+```
  '''[abonino@server1 ~]$''' mkdir .config/systemd/user
  '''[abonino@server1 ~]$''' cd .config/systemd/user
  '''[abonino@server1 user]$''' podman generate systemd --name My_wiki --files --new
@@ -63,3 +65,4 @@
  1 directory, 2 files
  '''[abonino@server1 user]$''' systemctl --user status container-My_wiki.service
  '''[abonino@server1 user]$'''
+```
