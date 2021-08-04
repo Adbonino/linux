@@ -9,6 +9,17 @@ Archivos involucrados:
 
 ~/.ssh/config
 
+```
+$ sudo /etc/ssh/sshd_config
+...
+PermitRootLogin yes
+....
+PasswordAuthentication yes
+...
+```
+
+systemctl stauts sshd
+
 
 ### Generar una llave SSH sin passphrase
 
