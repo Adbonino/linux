@@ -5,7 +5,6 @@
  # systemctl status xrdp
  # systemctl enable --now xrdp
  # systemclt status xrdp
- # systemctl status xrdp
  # firewall-cmd --permanent --add-service=vnc-server
  # firewall-cmd --reload
  # systemctl status xrdp
