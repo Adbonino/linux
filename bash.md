@@ -34,6 +34,6 @@ fi
 list=('Centos' 'Redhat' 'Fedora' 'Ubuntu')
 for ((x=1 ; x<=3 ; x++))
 do
-   echo ${liss[x]}
+   echo ${list[x]}
 done
 ```
