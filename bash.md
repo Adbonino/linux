@@ -1,4 +1,11 @@
 
+Para agregar timestamp en el history exportar lo siguiente:
+
+```
+export HISTTIMEFORMAT="%F %T "
+```
+
+
 ```
 [abonino@localhost ~]# echo $SHELL
 [abonino@localhost ~]# which bash
