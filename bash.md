@@ -2,7 +2,7 @@
 Para agregar timestamp en el history exportar lo siguiente:
 
 ```
-export HISTTIMEFORMAT="%F %T "
+[abonino@localhost ~]# export HISTTIMEFORMAT="%F %T "
 ```
 
 
