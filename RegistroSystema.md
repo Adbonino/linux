@@ -38,15 +38,34 @@ verifico si mi clietne puede resolver esa direccion
 
 CAMBIOS EN EL SERVIDOR
 # vim /etc/chrony.conf
-Hay una linea qeu dice allow
+Hay una linea que dice allow - agregar esta linea para permitir a mi red que se regstren en el NTP
 allow 192.168.20.0/24
-
+...
 # firewall-cmd --list-all
 # systemctl restart chronyd
 
-
 ```
 
+
+## Journalctl
+```
+/run/log/journal   -> por defecto
+
+hacerlo persistente
+# vim /etc/systemd/journal.conf
+Storage=persistent                  -> auto/volatile/persistent
+# systemctl restart systemd-journald 
+crea el directoiro /var/log/journal
+
+tamaños a utilizar
+# journalctl | grep -E 'Runtime|System journal'
+# vim /etc/systemd/journal.conf
+SystemMaxUse=2048M
+SystemMaxFileSize=100M
+# systemctl restart sustemd-journald
+# journalctl | grep -E 'Runtime|System journal'
+
+```
 
 
 
