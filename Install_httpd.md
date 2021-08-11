@@ -1,3 +1,5 @@
 # Install httpd
 
- # yum install httpd
+```
+yum install httpd
+```
